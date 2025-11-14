@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Marksheet-Ledger-main/',   // ✔ Correct (repo name matches)
+  base: '/Marksheet_Leasure_System_by_KIT/',   // ✔ Correct (repo name matches)
   optimizeDeps: {
     exclude: ['lucide-react'],       // ✔ OK
   },
