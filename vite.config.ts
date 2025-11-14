@@ -4,14 +4,15 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/Marksheet-Ledger-main/',   // ✔ Correct (repo name matches)
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    exclude: ['lucide-react'],       // ✔ OK
   },
   server: {
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
-        changeOrigin: true,
+        changeOrigin: true,          // ✔ OK for development only
       },
     },
   },
