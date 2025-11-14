@@ -1,18 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Marksheet_Leasure_System_by_KIT/',   // ✔ Correct (repo name matches)
+  base: '/Marksheet_Leasure_System_by_KIT/',
   optimizeDeps: {
-    exclude: ['lucide-react'],       // ✔ OK
+    exclude: ['lucide-react'],
   },
   server: {
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
-        changeOrigin: true,          // ✔ OK for development only
+        changeOrigin: true,
       },
     },
   },
